@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample03", "Sample03\Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoFileProcess", "VideoFileProcess\VideoFileProcess.csproj", "{ACC1ACD4-154E-4A60-8B0A-308A7871FBC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowCore.Test", "Workflowcore-Demo\WorkflowCore.Test.csproj", "{AA2981A9-5252-433D-AAA8-DE58E030D483}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkflowCore.Test", "WorkflowCore.Test\WorkflowCore.Test.csproj", "{569AE3AD-CFC4-4F7A-A429-A468C213284F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{ACC1ACD4-154E-4A60-8B0A-308A7871FBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACC1ACD4-154E-4A60-8B0A-308A7871FBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACC1ACD4-154E-4A60-8B0A-308A7871FBC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA2981A9-5252-433D-AAA8-DE58E030D483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA2981A9-5252-433D-AAA8-DE58E030D483}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA2981A9-5252-433D-AAA8-DE58E030D483}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA2981A9-5252-433D-AAA8-DE58E030D483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569AE3AD-CFC4-4F7A-A429-A468C213284F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569AE3AD-CFC4-4F7A-A429-A468C213284F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569AE3AD-CFC4-4F7A-A429-A468C213284F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569AE3AD-CFC4-4F7A-A429-A468C213284F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

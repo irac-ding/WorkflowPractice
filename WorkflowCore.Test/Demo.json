@@ -1,0 +1,58 @@
+{
+  "Id": "Workflow1",
+  "Version": 1,
+  "DataType": "WorkflowCore.Test.Data, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "Steps": [
+    {
+      "Id": "start",
+      "StepType": "WorkflowCore.Test.Steps.NullStepBody, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NextStepId": "Approved",
+      "Inputs": {}
+    },
+    {
+      "Id": "Approved",
+      "StepType": "WorkflowCore.Test.Steps.Task3, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "NextStepId": "Pass",
+      "Outputs": {
+        "Pass": "Ld3Pass" //pass为工作流表单内参数，Ld3Pass为task3内公开的参数，通过output进行赋值
+      }
+    },
+    {
+      //if条件只能带一种情况，NextStepId为另外一种情况。当满足condition进入do后，会执行do内的步骤，do内步骤的NextStepId有效，且do内全部步骤完成，则会执行条件内的NextStepId。
+      "Id": "Pass",
+      "StepType": "WorkflowCore.Primitives.If, WorkflowCore",
+      "Inputs": {
+        "Condition": "Data.Pass"
+      },
+      "NextStepId": "NotPass",
+      "Do": [
+        [
+          {
+            "Id": "task1",
+            "StepType": "WorkflowCore.Test.Steps.Task1, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ]
+      ]
+    },
+    {
+      "Id": "NotPass",
+      "StepType": "WorkflowCore.Primitives.If, WorkflowCore",
+      "Inputs": {
+        "Condition": "!Data.Pass"
+      },
+      "NextStepId": "end",
+      "Do": [
+        [
+          {
+            "Id": "task2",
+            "StepType": "WorkflowCore.Test.Steps.Task2, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+          }
+        ]
+      ]
+    },
+    {
+      "Id": "end",
+      "StepType": "WorkflowCore.Test.Steps.EndStepBody, WorkflowCore.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+  ]
+}
