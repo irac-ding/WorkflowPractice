@@ -1,0 +1,25 @@
+{
+  "Id": "ConvertToMKVWorkFlow",
+  "Version": 1,
+  "DataType": "VideoFileProcess.MyDataClass, VideoFileProcess",
+  "Steps": [
+    {
+      "Id": "DownloadVideoFile",
+      "StepType": "VideoFileProcess.Steps.DownloadVideoFile, VideoFileProcess",
+      "NextStepId": "ConvertToMKV",
+      "Inputs": {
+        "VideoFileUrl": "data.FileUrl"
+      },
+      "Outputs": {
+        "VideoFile": "step.SaveVideoFile"
+      }
+    },
+    {
+      "Id": "ConvertToMKV",
+      "StepType": "VideoFileProcess.Steps.ConvertToMKV, VideoFileProcess",
+      "Inputs": {
+        "InputVideoFile": "data.VideoFile"
+      }
+    }
+  ]
+}

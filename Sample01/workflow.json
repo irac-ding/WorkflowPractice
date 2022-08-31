@@ -1,0 +1,15 @@
+{
+  "Id": "HelloWorld",
+  "Version": 1,
+  "Steps": [
+    {
+      "Id": "Hello",
+      "StepType": "MyApp.HelloWorld, MyApp",
+      "NextStepId": "Bye"
+    },
+    {
+      "Id": "Bye",
+      "StepType": "MyApp.GoodbyeWorld, MyApp"
+    }
+  ]
+}

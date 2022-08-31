@@ -1,0 +1,26 @@
+{
+  "Id": "PassingDataWorkflow",
+  "Version": 1,
+  "DataType": "MyApp.MyDataClass, MyApp",
+  "Steps": [
+    {
+      "Id": "Add",
+      "StepType": "MyApp.AddNumbers, MyApp",
+      "NextStepId": "ShowResult",
+      "Inputs": {
+        "Input1": "data.Value1",
+        "Input2": "data.Value2"
+      },
+      "Outputs": {
+        "Answer": "step.Output"
+      }
+    },
+    {
+      "Id": "ShowResult",
+      "StepType": "MyApp.CustomMessage, MyApp",
+      "Inputs": {
+        "Message": "data.Answer"
+      }
+    }
+  ]
+}

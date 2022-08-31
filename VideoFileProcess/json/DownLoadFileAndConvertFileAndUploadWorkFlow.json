@@ -1,0 +1,36 @@
+{
+  "Id": "DownLoadFileAndConvertFileAndUploadWorkFlow",
+  "Version": 1,
+  "DataType": "VideoFileProcess.MyDataClass, VideoFileProcess",
+  "Steps": [
+    {
+      "Id": "DownloadVideoFile",
+      "StepType": "VideoFileProcess.Steps.DownloadVideoFile, VideoFileProcess",
+      "NextStepId": "ConvertToMp4",
+      "Inputs": {
+        "VideoFileUrl": "data.FileUrl"
+      },
+      "Outputs": {
+        "VideoFile": "step.SaveVideoFile"
+      }
+    },
+    {
+      "Id": "ConvertToMp4",
+      "StepType": "VideoFileProcess.Steps.ConvertToMp4, VideoFileProcess",
+      "NextStepId": "UploadVideoFile",
+      "Inputs": {
+        "InputVideoFile": "data.VideoFile"
+      },
+      "Outputs": {
+        "ConvertedVideoFile": "step.ConvertedVideoFile"
+      }
+    },
+    {
+      "Id": "UploadVideoFile",
+      "StepType": "VideoFileProcess.Steps.UploadVideoFile, VideoFileProcess",
+      "Inputs": {
+        "InputVideoFile": "data.ConvertedVideoFile"
+      }
+    }
+  ]
+}

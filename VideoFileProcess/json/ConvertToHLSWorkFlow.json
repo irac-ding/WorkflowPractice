@@ -1,0 +1,25 @@
+{
+  "Id": "ConvertToHLSWorkFlow",
+  "Version": 1,
+  "DataType": "VideoFileProcess.MyDataClass, VideoFileProcess",
+  "Steps": [
+    {
+      "Id": "DownloadVideoFile",
+      "StepType": "VideoFileProcess.Steps.DownloadVideoFile, VideoFileProcess",
+      "NextStepId": "CovertToHLS",
+      "Inputs": {
+        "VideoFileUrl": "data.FileUrl"
+      },
+      "Outputs": {
+        "VideoFile": "step.SaveVideoFile"
+      }
+    },
+    {
+      "Id": "CovertToHLS",
+      "StepType": "VideoFileProcess.Steps.CovertToHLS, VideoFileProcess",
+      "Inputs": {
+        "InputVideoFile": "data.VideoFile"
+      }
+    }
+  ]
+}
