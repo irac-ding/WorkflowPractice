@@ -67,9 +67,9 @@ namespace VideoFileProcess
                 FileUrl = "http://10.12.23.123/data//data/VictoriasSecretFashionShow2008.3gp"
             };
 
-            //host.StartWorkflow("ConvertToMKVWorkFlow", 1, initialData);
-            //host.StartWorkflow("ConvertToHLSWorkFlow", 1, initialData);
-            //host.StartWorkflow("ConvertToMp4WorkFlow", 1, initialData);
+            host.StartWorkflow("ConvertToMKVWorkFlow", 1, initialData);
+            host.StartWorkflow("ConvertToHLSWorkFlow", 1, initialData);
+            host.StartWorkflow("ConvertToMp4WorkFlow", 1, initialData);
             host.StartWorkflow("DownLoadFileAndConvertFileAndUploadWorkFlow", 1, initialData);
 
             Console.ReadLine();
