@@ -88,8 +88,8 @@ namespace VideoFileProcess
 
             IServiceCollection services = new ServiceCollection();
             services.AddLogging();
-            services.AddWorkflow();
-
+            //services.AddWorkflow();
+            services.AddWorkflow(x => x.UseMongoDB(@"mongodb://10.12.23.123:27017", "workflow"));
             services.AddWorkflowDSL();
 
             var serviceProvider = services.BuildServiceProvider();
